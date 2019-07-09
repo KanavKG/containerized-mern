@@ -8,14 +8,13 @@ WORKDIR /client
 COPY package*.json /client/
 
 # installing dependencies
-RUN npm install npm@latest -g
-RUN npm cache verify
+
 RUN npm install
 
 # Make port 3000 available to the world for communication
 EXPOSE 3000
 
-COPY . /client
+COPY . /client/
 
 # Run the app when the container launches
 CMD ["npm", "start"]

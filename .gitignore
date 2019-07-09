@@ -9,6 +9,9 @@
 # production
 /build
 
+#MongoDB data
+/data-node
+
 # misc
 .DS_Store
 .env.local

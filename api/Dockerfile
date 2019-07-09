@@ -10,11 +10,11 @@ COPY package*.json /api/
 # installing dependencies
 RUN npm install
 
+# Make port 80 available to the world for communication
+EXPOSE 80
+
 # Copying the current directory contents into the container at /api
 COPY . /api/
-
-# Make port 3000 available to the world for communication
-EXPOSE 80
 
 ADD https://github.com/ufoscout/docker-compose-wait/releases/download/2.2.1/wait /wait
 RUN chmod +x /wait
